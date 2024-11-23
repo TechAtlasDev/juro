@@ -1,0 +1,32 @@
+---
+import TabContentFiles from "./TabContentFiles.astro";
+---
+
+<section
+	class="flex flex-col items-start h-full bg-base-300 px-5 py-8 gap-y-5 w-72">
+	<h2 class="font-bold text-2xl">Schema</h2>
+	<div role="tablist" class="tabs tabs-bordered h-full justify-between">
+		<input
+			type="radio"
+			name="my_tabs_1"
+			role="tab"
+			class="tab"
+			aria-label="Files"
+		/>
+		<div role="tabpanel" class="tab-content py-5 px-3">
+			<TabContentFiles />
+		</div>
+
+		<input
+			type="radio"
+			name="my_tabs_1"
+			role="tab"
+			class="tab"
+			aria-label="Tools"
+			checked="checked"
+		/>
+		<div role="tabpanel" class="tab-content py-5 px-3">
+			<TabContentFiles />
+		</div>
+	</div>
+</section>
